@@ -6,7 +6,7 @@ int relay[]={8,9,10,11};
 bool check[]={0,0,0,0};                                
 const int IR_RECEIVE_PIN = 2;                          
 LiquidCrystal_I2C lcd(0x27, 16, 2);                   
-void lcd_display();                                 
+void Lcd_Update_Display();                                 
 void setup()
 {
    Serial.begin(9600);         
@@ -142,11 +142,11 @@ void loop()
         //nothing to do...
       }
 
-      lcd_display();
+      Lcd_Update_Display();
       IrReceiver.resume();
    }
 }
-void lcd_display()
+void Lcd_Update_Display()
 {
   lcd.clear();
   if(check[0]==0&&check[1]==0&&check[2]==0&&check[3]==0)
