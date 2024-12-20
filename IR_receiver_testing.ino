@@ -1,4 +1,4 @@
-#include <IRremote.h>
+#include <IRremote.h
 const int IR_RECEIVE_PIN = 2;
 
 void setup()
